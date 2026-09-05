@@ -7,38 +7,44 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: #0b132b;
-    color: #e2e8f0;
+    background-color: #faf8f5;
+    color: #292524;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
   }
 }
 
-/* Custom glassmorphism and subtle glow effects */
-.glass-panel {
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Aura Card Glass & Elevated Effects */
+.aura-card {
+  background: #ffffff;
+  border: 1px solid rgba(214, 205, 194, 0.5);
+  box-shadow: 0 4px 20px -4px rgba(44, 30, 25, 0.04);
 }
 
-.glass-card {
-  background: rgba(30, 41, 59, 0.5);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+.aura-card-hover {
+  transition: all 0.3s ease;
+}
+.aura-card-hover:hover {
+  transform: translateY(-2px);
+  border-color: rgba(171, 136, 114, 0.4);
+  box-shadow: 0 12px 30px -6px rgba(44, 30, 25, 0.08);
 }
 
-.teal-gradient-text {
-  background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 50%, #38bdf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.aura-badge {
+  background: #f4efe8;
+  color: #7a5746;
+  border: 1px solid #e8ded2;
 }
 
-.teal-gradient-bg {
-  background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #0284c7 100%);
+.aura-gradient-btn {
+  background: linear-gradient(135deg, #7a5746 0%, #533c33 100%);
+  color: #ffffff;
 }
-
-.glow-teal {
-  box-shadow: 0 0 30px -5px rgba(20, 184, 166, 0.3);
+.aura-gradient-btn:hover {
+  opacity: 0.95;
+  box-shadow: 0 6px 20px -4px rgba(83, 60, 51, 0.3);
 }
 
 /* Custom scrollbar */
@@ -46,12 +52,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b132b;
+  background: #faf8f5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #d7c5b4;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0f766e;
+  background: #ab8872;
 }

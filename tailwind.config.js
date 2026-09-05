@@ -6,38 +6,24 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        teal: {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf',
-          500: '#14b8a6',
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#115e59',
-          900: '#134e4a',
-          950: '#042f2e',
-        },
-        navy: {
-          800: '#0f172a',
-          900: '#0a0f1d',
-          950: '#050810',
-        }
-      },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Outfit', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
+        heading: ['"Playfair Display"', 'serif'],
       },
-      animation: {
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'float': 'float 6s ease-in-out infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
+      colors: {
+        aura: {
+          50: '#faf8f5',
+          100: '#f4efe8',
+          200: '#e8ded2',
+          300: '#d7c5b4',
+          400: '#c2a591',
+          500: '#ab8872',
+          600: '#956f5a',
+          700: '#7a5746',
+          800: '#64473b',
+          900: '#533c33',
+          950: '#2c1e19',
         }
       }
     },

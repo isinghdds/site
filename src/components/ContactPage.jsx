@@ -40,17 +40,17 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="py-12 sm:py-16 space-y-12 animate-in fade-in duration-300">
+    <div className="py-10 sm:py-16 space-y-12 animate-in fade-in duration-300">
       
       {/* Header */}
       <div className="max-w-3xl mx-auto text-center space-y-3">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-950/80 border border-teal-800 text-teal-400 text-xs font-semibold uppercase tracking-wider">
-          <MapPin className="w-3.5 h-3.5" /> Reach Out
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full aura-badge text-xs font-semibold">
+          <MapPin className="w-3.5 h-3.5 text-aura-600" /> Reach Out
         </div>
-        <h1 className="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+        <h1 className="font-serif font-bold text-3xl sm:text-4xl text-stone-900 tracking-tight">
           Contact & Location
         </h1>
-        <p className="text-slate-300 text-sm sm:text-base">
+        <p className="text-stone-600 text-sm sm:text-base">
           Have a question or want to get in touch? Send us a message below.
         </p>
       </div>
@@ -60,37 +60,37 @@ export default function ContactPage() {
         {/* Left: Info Cards */}
         <div className="lg:col-span-5 space-y-4 text-left">
           
-          <div className="glass-card p-6 rounded-2xl border border-slate-800 flex items-start gap-4">
-            <div className="w-10 h-10 rounded-xl teal-gradient-bg text-white flex items-center justify-center shrink-0 shadow-md">
+          <div className="aura-card p-6 rounded-3xl flex items-start gap-4">
+            <div className="w-10 h-10 rounded-full bg-aura-100 text-aura-700 border border-aura-200 flex items-center justify-center shrink-0">
               <MapPin className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="font-heading font-bold text-white text-base">Location</h4>
-              <p className="text-xs sm:text-sm text-slate-300 mt-1">{doctorInfo.address}</p>
+              <h4 className="font-serif font-bold text-stone-900 text-base">Location</h4>
+              <p className="text-xs sm:text-sm text-stone-600 mt-1">{doctorInfo.address}</p>
               <a
                 href={`https://maps.google.com/?q=${encodeURIComponent(doctorInfo.address)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-xs font-semibold text-teal-400 hover:underline mt-2"
+                className="inline-block text-xs font-semibold text-aura-700 hover:underline mt-2"
               >
                 Get Directions →
               </a>
             </div>
           </div>
 
-          <div className="glass-card p-6 rounded-2xl border border-slate-800 flex items-start gap-4">
-            <div className="w-10 h-10 rounded-xl teal-gradient-bg text-white flex items-center justify-center shrink-0 shadow-md">
+          <div className="aura-card p-6 rounded-3xl flex items-start gap-4">
+            <div className="w-10 h-10 rounded-full bg-aura-100 text-aura-700 border border-aura-200 flex items-center justify-center shrink-0">
               <Mail className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="font-heading font-bold text-white text-base">Direct Email</h4>
+              <h4 className="font-serif font-bold text-stone-900 text-base">Direct Email</h4>
               <a 
                 href={`mailto:${doctorInfo.email}`}
-                className="text-xs sm:text-sm text-teal-300 font-medium hover:underline mt-1 block"
+                className="text-xs sm:text-sm text-aura-700 font-semibold hover:underline mt-1 block"
               >
                 {doctorInfo.email}
               </a>
-              <p className="text-xs text-slate-400 mt-1">Response within 24 business hours</p>
+              <p className="text-xs text-stone-600 mt-1">Response within 24 business hours</p>
             </div>
           </div>
 
@@ -98,18 +98,18 @@ export default function ContactPage() {
 
         {/* Right: Contact Form */}
         <div className="lg:col-span-7">
-          <div className="glass-card p-7 sm:p-9 rounded-3xl border border-slate-800 shadow-2xl text-left">
-            <h3 className="font-heading font-extrabold text-2xl text-white mb-2">
+          <div className="aura-card p-7 sm:p-9 rounded-3xl shadow-sm text-left">
+            <h3 className="font-serif font-bold text-2xl text-stone-900 mb-2">
               Send Dr. Singh a Message
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 mb-6">
-              Submitting this form delivers your message directly to <strong className="text-white">{doctorInfo.email}</strong>.
+            <p className="text-xs sm:text-sm text-stone-600 mb-6">
+              Submitting this form delivers your message directly to <strong className="text-stone-900">{doctorInfo.email}</strong>.
             </p>
 
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-medium text-slate-300 mb-1">
+                  <label className="block text-xs font-semibold text-stone-700 mb-1">
                     Your Full Name *
                   </label>
                   <input
@@ -118,12 +118,12 @@ export default function ContactPage() {
                     placeholder="Jane Doe"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-teal-500"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-stone-900 text-sm focus:outline-none focus:border-aura-600 focus:bg-white"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-slate-300 mb-1">
+                  <label className="block text-xs font-semibold text-stone-700 mb-1">
                     Email Address *
                   </label>
                   <input
@@ -132,12 +132,12 @@ export default function ContactPage() {
                     placeholder="jane@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-teal-500"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-stone-900 text-sm focus:outline-none focus:border-aura-600 focus:bg-white"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-slate-300 mb-1">
+                  <label className="block text-xs font-semibold text-stone-700 mb-1">
                     Your Message *
                   </label>
                   <textarea
@@ -146,14 +146,14 @@ export default function ContactPage() {
                     placeholder="Type your message or inquiry here..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-teal-500"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-stone-900 text-sm focus:outline-none focus:border-aura-600 focus:bg-white"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3.5 text-xs font-bold text-white teal-gradient-bg rounded-xl shadow-lg hover:opacity-95 flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="w-full py-3.5 text-xs font-semibold text-white aura-gradient-btn rounded-xl shadow-md hover:opacity-95 flex items-center justify-center gap-2 disabled:opacity-50 transition-all"
                 >
                   {isSubmitting ? (
                     <>
@@ -170,19 +170,19 @@ export default function ContactPage() {
               </form>
             ) : (
               <div className="py-12 text-center space-y-4 animate-in fade-in">
-                <div className="w-14 h-14 rounded-2xl bg-teal-500/20 text-teal-400 border border-teal-500/40 flex items-center justify-center mx-auto">
+                <div className="w-14 h-14 rounded-full bg-aura-100 text-aura-700 border border-aura-300 flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-7 h-7" />
                 </div>
-                <h4 className="font-heading font-bold text-xl text-white">Message Sent!</h4>
-                <p className="text-xs sm:text-sm text-slate-300 max-w-sm mx-auto leading-relaxed">
-                  Thank you, <strong className="text-white">{formData.name}</strong>. Your inquiry has been sent directly to <strong className="text-teal-300">isha@ishasinghdds.com</strong>.
+                <h4 className="font-serif font-bold text-xl text-stone-900">Message Sent!</h4>
+                <p className="text-xs sm:text-sm text-stone-600 max-w-sm mx-auto leading-relaxed">
+                  Thank you, <strong className="text-stone-900">{formData.name}</strong>. Your inquiry has been sent directly to <strong className="text-aura-700">isha@ishasinghdds.com</strong>.
                 </p>
                 <button
                   onClick={() => {
                     setSubmitted(false);
                     setFormData({ name: '', email: '', message: '' });
                   }}
-                  className="px-5 py-2 text-xs font-semibold text-slate-300 bg-slate-800 rounded-xl border border-slate-700"
+                  className="px-5 py-2 text-xs font-semibold text-stone-700 bg-stone-100 rounded-full border border-stone-300 hover:bg-stone-200"
                 >
                   Send Another Message
                 </button>

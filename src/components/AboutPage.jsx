@@ -4,35 +4,35 @@ import { doctorInfo } from '../data/simplifiedData';
 
 export default function AboutPage({ onExploreTips, onContactClick }) {
   return (
-    <div className="py-12 sm:py-16 space-y-16 animate-in fade-in duration-300">
+    <div className="py-10 sm:py-16 space-y-16 animate-in fade-in duration-300">
       
-      {/* Hero Header */}
-      <div className="max-w-4xl mx-auto text-center space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-950/80 border border-teal-800 text-teal-300 text-xs font-semibold">
-          <Sparkles className="w-3.5 h-3.5" /> Welcome to Dr. Singh's Practice
+      {/* Hero Section */}
+      <div className="max-w-3xl mx-auto text-center space-y-5">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full aura-badge text-xs font-semibold">
+          <Sparkles className="w-3.5 h-3.5 text-aura-600" /> Welcome to Dr. Singh's Practice
         </div>
         
-        <h1 className="font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+        <h1 className="font-serif font-bold text-3xl sm:text-5xl text-stone-900 tracking-tight leading-[1.2]">
           Gentle, Modern & Compassionate <br />
-          <span className="teal-gradient-text">Dental Care</span>
+          <span className="italic font-normal text-aura-700">Dental Care</span>
         </h1>
 
-        <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        <p className="text-stone-600 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
           {doctorInfo.tagline}
         </p>
 
-        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
           <button
             onClick={onExploreTips}
-            className="w-full sm:w-auto px-6 py-3 text-sm font-semibold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-xl border border-slate-700 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-6 py-3 text-xs sm:text-sm font-semibold text-stone-700 hover:text-stone-900 bg-white hover:bg-stone-100 rounded-full border border-stone-300 flex items-center justify-center gap-2 shadow-sm transition-all"
           >
             <span>Read Dental Health Tips</span>
-            <ArrowRight className="w-4 h-4 text-teal-400" />
+            <ArrowRight className="w-4 h-4 text-aura-700" />
           </button>
 
           <button
             onClick={onContactClick}
-            className="w-full sm:w-auto px-6 py-3 text-sm font-semibold text-white teal-gradient-bg rounded-xl shadow-md flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-6 py-3 text-xs sm:text-sm font-semibold text-white aura-gradient-btn rounded-full shadow-md flex items-center justify-center gap-2 transition-all"
           >
             <span>Contact Office</span>
           </button>
@@ -43,28 +43,30 @@ export default function AboutPage({ onExploreTips, onContactClick }) {
       <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
         {/* Photo Card & Languages */}
-        <div className="lg:col-span-5 relative space-y-4">
-          <div className="relative rounded-2xl overflow-hidden border border-slate-700 glass-panel shadow-2xl">
-            <img
-              src="/dr-isha-singh.jpg"
-              alt="Dr. Isha Singh, DDS"
-              className="w-full h-96 object-cover object-top"
-            />
-            <div className="p-4 bg-slate-900 border-t border-slate-800 text-center">
-              <h3 className="font-heading font-bold text-xl text-white">{doctorInfo.name}</h3>
-              <p className="text-xs text-teal-400 font-medium">{doctorInfo.title}</p>
+        <div className="lg:col-span-5 space-y-4">
+          <div className="aura-card rounded-3xl overflow-hidden p-3 shadow-sm border border-stone-200">
+            <div className="rounded-2xl overflow-hidden">
+              <img
+                src="/dr-isha-singh.jpg"
+                alt="Dr. Isha Singh, DDS"
+                className="w-full h-96 object-cover object-top"
+              />
+            </div>
+            <div className="p-4 text-center">
+              <h3 className="font-serif font-bold text-xl text-stone-900">{doctorInfo.name}</h3>
+              <p className="text-xs text-aura-700 font-medium mt-0.5">{doctorInfo.title}</p>
             </div>
           </div>
 
           {/* Languages Spoken Box */}
-          <div className="glass-card p-4 rounded-xl border border-slate-800 flex items-center justify-between">
-            <div className="flex items-center gap-2 text-xs font-semibold text-slate-300">
-              <Globe className="w-4 h-4 text-teal-400" />
+          <div className="aura-card p-4 rounded-2xl border border-stone-200 flex items-center justify-between">
+            <div className="flex items-center gap-2 text-xs font-semibold text-stone-700">
+              <Globe className="w-4 h-4 text-aura-600" />
               <span>Languages Spoken:</span>
             </div>
             <div className="flex gap-2">
               {doctorInfo.languages.map((lang, idx) => (
-                <span key={idx} className="px-2.5 py-1 text-xs font-semibold text-teal-300 bg-teal-950/80 border border-teal-800 rounded-lg">
+                <span key={idx} className="px-3 py-1 text-xs font-semibold text-aura-800 aura-badge rounded-full">
                   {lang}
                 </span>
               ))}
@@ -72,36 +74,36 @@ export default function AboutPage({ onExploreTips, onContactClick }) {
           </div>
         </div>
 
-        {/* Biography & Credentials */}
+        {/* Biography & Qualifications */}
         <div className="lg:col-span-7 space-y-6 text-left">
-          <div>
-            <h2 className="font-heading font-bold text-2xl text-white mb-4">
+          <div className="aura-card p-7 rounded-3xl space-y-4">
+            <h2 className="font-serif font-bold text-2xl text-stone-900">
               About Dr. Isha Singh, DDS
             </h2>
-            <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+            <div className="space-y-4 text-stone-600 text-sm sm:text-base leading-relaxed whitespace-pre-line">
               {doctorInfo.bio}
             </div>
           </div>
 
-          <div className="pt-2">
-            <h3 className="font-heading font-semibold text-xs text-teal-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-              <GraduationCap className="w-4 h-4" /> Qualifications & Education
+          <div className="aura-card p-6 rounded-3xl space-y-3">
+            <h3 className="font-serif font-bold text-lg text-stone-900 flex items-center gap-2">
+              <GraduationCap className="w-5 h-5 text-aura-600" /> Qualifications & Education
             </h3>
             
-            <div className="space-y-2.5">
+            <div className="space-y-2">
               {doctorInfo.credentials.map((cred, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
-                  <Check className="w-4 h-4 text-teal-400 shrink-0" />
-                  <span className="text-xs sm:text-sm text-slate-200 font-medium">{cred}</span>
+                <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-stone-50 border border-stone-200/80">
+                  <Check className="w-4 h-4 text-aura-700 shrink-0" />
+                  <span className="text-xs sm:text-sm text-stone-800 font-medium">{cred}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Highlight Quote */}
-          <div className="p-4 rounded-xl bg-teal-950/50 border border-teal-800/60 flex items-center gap-3">
-            <Heart className="w-5 h-5 text-teal-300 shrink-0" />
-            <p className="text-xs text-teal-200 leading-relaxed">
+          {/* Quote Card */}
+          <div className="p-5 rounded-2xl bg-aura-100/70 border border-aura-200 flex items-center gap-3">
+            <Heart className="w-5 h-5 text-aura-700 shrink-0" />
+            <p className="text-xs sm:text-sm text-aura-900 font-serif italic leading-relaxed">
               "Driven by the belief that oral health is paramount to overall well-being."
             </p>
           </div>

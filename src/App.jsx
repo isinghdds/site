@@ -9,7 +9,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('about'); // 'about' | 'tips' | 'contact'
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-teal-500 selection:text-white">
+    <div className="min-h-screen bg-[#faf8f5] text-stone-800 flex flex-col font-sans selection:bg-aura-800 selection:text-white">
       {/* Header */}
       <Navbar
         activeTab={activeTab}
@@ -17,7 +17,7 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6">
+      <main className="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6">
         {activeTab === 'about' && (
           <AboutPage
             onExploreTips={() => setActiveTab('tips')}
