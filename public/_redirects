@@ -1,0 +1,3 @@
+# Redirect root domain to www.ishasinghdds.com
+https://ishasinghdds.com/* https://www.ishasinghdds.com/:splat 301!
+http://ishasinghdds.com/* https://www.ishasinghdds.com/:splat 301!
