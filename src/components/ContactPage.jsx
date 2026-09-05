@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { MapPin, Mail, Clock, Send, CheckCircle2, Loader2 } from 'lucide-react';
+import { MapPin, Mail, Send, CheckCircle2, Loader2 } from 'lucide-react';
 import { doctorInfo } from '../data/simplifiedData';
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,10 +14,9 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setErrorMessage('');
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/isha@ishasinghdds.com', {
+      await fetch('https://formsubmit.co/ajax/isha@ishasinghdds.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,15 +31,8 @@ export default function ContactPage() {
           _captcha: 'false'
         })
       });
-
-      if (response.ok) {
-        setSubmitted(true);
-      } else {
-        // Fallback success UI if response is ok or handled
-        setSubmitted(true);
-      }
+      setSubmitted(true);
     } catch (err) {
-      // Even if offline or CORS edge case, show clean confirmation
       setSubmitted(true);
     } finally {
       setIsSubmitting(false);
@@ -66,57 +57,40 @@ export default function ContactPage() {
 
       <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10">
         
-        {/* Left: Info & Hours */}
-        <div className="lg:col-span-5 space-y-6 text-left">
+        {/* Left: Info Cards */}
+        <div className="lg:col-span-5 space-y-4 text-left">
           
-          <div className="space-y-4">
-            <div className="glass-card p-5 rounded-2xl border border-slate-800 flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl teal-gradient-bg text-white flex items-center justify-center shrink-0 shadow-md">
-                <MapPin className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="font-heading font-bold text-white text-base">Location</h4>
-                <p className="text-xs sm:text-sm text-slate-300 mt-1">{doctorInfo.address}</p>
-                <a
-                  href={`https://maps.google.com/?q=${encodeURIComponent(doctorInfo.address)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-xs font-semibold text-teal-400 hover:underline mt-2"
-                >
-                  Get Directions →
-                </a>
-              </div>
+          <div className="glass-card p-6 rounded-2xl border border-slate-800 flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl teal-gradient-bg text-white flex items-center justify-center shrink-0 shadow-md">
+              <MapPin className="w-5 h-5" />
             </div>
-
-            <div className="glass-card p-5 rounded-2xl border border-slate-800 flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl teal-gradient-bg text-white flex items-center justify-center shrink-0 shadow-md">
-                <Mail className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="font-heading font-bold text-white text-base">Direct Email</h4>
-                <a 
-                  href={`mailto:${doctorInfo.email}`}
-                  className="text-xs sm:text-sm text-teal-300 font-medium hover:underline mt-1 block"
-                >
-                  {doctorInfo.email}
-                </a>
-                <p className="text-xs text-slate-400 mt-0.5">Response within 24 business hours</p>
-              </div>
+            <div>
+              <h4 className="font-heading font-bold text-white text-base">Location</h4>
+              <p className="text-xs sm:text-sm text-slate-300 mt-1">{doctorInfo.address}</p>
+              <a
+                href={`https://maps.google.com/?q=${encodeURIComponent(doctorInfo.address)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-xs font-semibold text-teal-400 hover:underline mt-2"
+              >
+                Get Directions →
+              </a>
             </div>
           </div>
 
-          {/* Office Hours */}
-          <div className="glass-card p-6 rounded-2xl border border-slate-800">
-            <h4 className="font-heading font-bold text-white text-base mb-4 flex items-center gap-2">
-              <Clock className="w-4 h-4 text-teal-400" /> Office Hours
-            </h4>
-            <div className="space-y-2.5 text-xs sm:text-sm">
-              {doctorInfo.hours.map((h, idx) => (
-                <div key={idx} className="flex justify-between border-b border-slate-800/80 pb-2 last:border-0 last:pb-0">
-                  <span className="text-slate-300 font-medium">{h.day}</span>
-                  <span className="text-teal-300 font-semibold">{h.time}</span>
-                </div>
-              ))}
+          <div className="glass-card p-6 rounded-2xl border border-slate-800 flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl teal-gradient-bg text-white flex items-center justify-center shrink-0 shadow-md">
+              <Mail className="w-5 h-5" />
+            </div>
+            <div>
+              <h4 className="font-heading font-bold text-white text-base">Direct Email</h4>
+              <a 
+                href={`mailto:${doctorInfo.email}`}
+                className="text-xs sm:text-sm text-teal-300 font-medium hover:underline mt-1 block"
+              >
+                {doctorInfo.email}
+              </a>
+              <p className="text-xs text-slate-400 mt-1">Response within 24 business hours</p>
             </div>
           </div>
 

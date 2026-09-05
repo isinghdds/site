@@ -16,12 +16,6 @@ Beyond her professional endeavors, Dr. Singh enjoys spending quality time with h
   languages: [
     "English",
     "Hindi"
-  ],
-  hours: [
-    { day: "Monday - Thursday", time: "8:00 AM - 5:30 PM" },
-    { day: "Friday", time: "8:00 AM - 3:00 PM" },
-    { day: "Saturday", time: "By Appointment" },
-    { day: "Sunday", time: "Closed" }
   ]
 };
 
