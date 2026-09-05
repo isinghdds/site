@@ -99,12 +99,9 @@ export default function ContactPage() {
         {/* Right: Contact Form */}
         <div className="lg:col-span-7">
           <div className="aura-card p-7 sm:p-9 rounded-3xl shadow-sm text-left">
-            <h3 className="font-serif font-bold text-2xl text-stone-900 mb-2">
+            <h3 className="font-serif font-bold text-2xl text-stone-900 mb-6">
               Send Dr. Singh a Message
             </h3>
-            <p className="text-xs sm:text-sm text-stone-600 mb-6">
-              Submitting this form delivers your message directly to <strong className="text-stone-900">{doctorInfo.email}</strong>.
-            </p>
 
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -158,12 +155,12 @@ export default function ContactPage() {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="w-4 h-4 animate-spin" />
-                      <span>Sending Email...</span>
+                      <span>Sending...</span>
                     </>
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      <span>Send Email to isha@ishasinghdds.com</span>
+                      <span>Send Message</span>
                     </>
                   )}
                 </button>
@@ -175,7 +172,7 @@ export default function ContactPage() {
                 </div>
                 <h4 className="font-serif font-bold text-xl text-stone-900">Message Sent!</h4>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-sm mx-auto leading-relaxed">
-                  Thank you, <strong className="text-stone-900">{formData.name}</strong>. Your inquiry has been sent directly to <strong className="text-aura-700">isha@ishasinghdds.com</strong>.
+                  Thank you, <strong className="text-stone-900">{formData.name}</strong>. Your message has been received.
                 </p>
                 <button
                   onClick={() => {
