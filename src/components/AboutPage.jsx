@@ -46,7 +46,7 @@ export default function AboutPage({ onExploreTips, onContactClick }) {
         <div className="lg:col-span-5 relative space-y-4">
           <div className="relative rounded-2xl overflow-hidden border border-slate-700 glass-panel shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
+              src="/dr-isha-singh.jpg"
               alt="Dr. Isha Singh, DDS"
               className="w-full h-96 object-cover object-top"
             />
