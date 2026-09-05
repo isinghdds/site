@@ -1,15 +1,21 @@
 export const doctorInfo = {
   name: "Dr. Isha Singh, DDS",
-  title: "General & Cosmetic Dentistry",
+  title: "General & Preventive Dentistry",
   email: "care@ishasinghdds.com",
   address: "742 Evergreen Terrace, Suite 200, Metro City, NY 10001",
   tagline: "Compassionate, gentle dental care for healthy, radiant smiles.",
-  bio: `Dr. Isha Singh, DDS, is dedicated to providing personalized, high-quality dental care in a warm and relaxing environment. With advanced training in cosmetic and preventative dentistry, Dr. Singh focuses on long-term oral health, gentle treatments, and helping every patient feel comfortable in the chair.`,
+  bio: `Dr. Isha Singh, originally hailing from New Delhi, India, embarked on a journey of cultural immersion early in life, residing across various regions of India. These diverse experiences have sculpted her into the compassionate and understanding professional she is today. Beginning her career in a community clinic in India, she later pursued her DDS at UCSF School of Dentistry in the US.
+
+With a foundation rooted in preventive and comprehensive care, her innate gentleness and patience enable her to empathize with patients' dental anxieties, guiding them towards optimal dental health. Driven by the belief that oral health is paramount to overall well-being, she advocates for broader awareness of oral health and its correlation with general health.
+
+Beyond her professional endeavors, Dr. Singh enjoys spending quality time with her loved ones and indulging her passion for travel. Exploring diverse cultures, reveling in nature's beauty, and savoring culinary delights fuel her curiosity and zest for life.`,
   credentials: [
-    "Doctor of Dental Surgery (DDS)",
-    "Member, American Dental Association (ADA)",
-    "Certified in Gentle & Low-Anxiety Dentistry",
-    "Specialist in Preventive & Aesthetic Treatments"
+    "Degree in Doctor of Dental Surgery (DDS)",
+    "UCSF School of Dentistry"
+  ],
+  languages: [
+    "English",
+    "Hindi"
   ],
   hours: [
     { day: "Monday - Thursday", time: "8:00 AM - 5:30 PM" },

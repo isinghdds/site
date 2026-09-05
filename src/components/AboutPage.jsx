@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Heart, Check, Sparkles, ArrowRight } from 'lucide-react';
+import { GraduationCap, Heart, Check, Sparkles, ArrowRight, Globe } from 'lucide-react';
 import { doctorInfo } from '../data/simplifiedData';
 
 export default function AboutPage({ onExploreTips, onContactClick }) {
@@ -13,8 +13,8 @@ export default function AboutPage({ onExploreTips, onContactClick }) {
         </div>
         
         <h1 className="font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
-          Gentle, Modern & Caring <br />
-          <span className="teal-gradient-text">Dental Care for Every Patient</span>
+          Gentle, Modern & Compassionate <br />
+          <span className="teal-gradient-text">Dental Care</span>
         </h1>
 
         <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
@@ -40,10 +40,10 @@ export default function AboutPage({ onExploreTips, onContactClick }) {
       </div>
 
       {/* Main Profile Grid */}
-      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
-        {/* Photo Card */}
-        <div className="lg:col-span-5 relative">
+        {/* Photo Card & Languages */}
+        <div className="lg:col-span-5 relative space-y-4">
           <div className="relative rounded-2xl overflow-hidden border border-slate-700 glass-panel shadow-2xl">
             <img
               src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
@@ -55,27 +55,42 @@ export default function AboutPage({ onExploreTips, onContactClick }) {
               <p className="text-xs text-teal-400 font-medium">{doctorInfo.title}</p>
             </div>
           </div>
+
+          {/* Languages Spoken Box */}
+          <div className="glass-card p-4 rounded-xl border border-slate-800 flex items-center justify-between">
+            <div className="flex items-center gap-2 text-xs font-semibold text-slate-300">
+              <Globe className="w-4 h-4 text-teal-400" />
+              <span>Languages Spoken:</span>
+            </div>
+            <div className="flex gap-2">
+              {doctorInfo.languages.map((lang, idx) => (
+                <span key={idx} className="px-2.5 py-1 text-xs font-semibold text-teal-300 bg-teal-950/80 border border-teal-800 rounded-lg">
+                  {lang}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Biography & Credentials */}
         <div className="lg:col-span-7 space-y-6 text-left">
           <div>
-            <h2 className="font-heading font-bold text-2xl text-white mb-3">
+            <h2 className="font-heading font-bold text-2xl text-white mb-4">
               About Dr. Isha Singh, DDS
             </h2>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+            <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
               {doctorInfo.bio}
-            </p>
+            </div>
           </div>
 
           <div className="pt-2">
             <h3 className="font-heading font-semibold text-xs text-teal-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-              <GraduationCap className="w-4 h-4" /> Professional Credentials
+              <GraduationCap className="w-4 h-4" /> Qualifications & Education
             </h3>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="space-y-2.5">
               {doctorInfo.credentials.map((cred, idx) => (
-                <div key={idx} className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/60 border border-slate-700/60">
+                <div key={idx} className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
                   <Check className="w-4 h-4 text-teal-400 shrink-0" />
                   <span className="text-xs sm:text-sm text-slate-200 font-medium">{cred}</span>
                 </div>
@@ -83,11 +98,11 @@ export default function AboutPage({ onExploreTips, onContactClick }) {
             </div>
           </div>
 
-          {/* Quick Highlight Box */}
+          {/* Highlight Quote */}
           <div className="p-4 rounded-xl bg-teal-950/50 border border-teal-800/60 flex items-center gap-3">
             <Heart className="w-5 h-5 text-teal-300 shrink-0" />
             <p className="text-xs text-teal-200 leading-relaxed">
-              "We take pride in creating a stress-free environment where every treatment is explained clearly and performed gently."
+              "Driven by the belief that oral health is paramount to overall well-being."
             </p>
           </div>
         </div>
