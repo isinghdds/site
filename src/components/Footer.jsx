@@ -1,5 +1,4 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
 import { doctorInfo } from '../data/simplifiedData';
 
 export default function Footer({ setActiveTab }) {
@@ -7,11 +6,13 @@ export default function Footer({ setActiveTab }) {
     <footer className="bg-[#f4efe8] border-t border-stone-200 py-10 text-stone-600 text-xs">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         
-        {/* Left: Brand */}
+        {/* Left: Official Logo & Domain */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-aura-800 flex items-center justify-center text-white">
-            <Sparkles className="w-4 h-4 text-amber-200" />
-          </div>
+          <img
+            src="/logo.jpg"
+            alt="Isha Singh DDS Logo"
+            className="h-10 w-auto object-contain mix-blend-multiply"
+          />
           <div>
             <span className="font-serif font-bold text-stone-900 text-sm block">
               {doctorInfo.name}
