@@ -1,7 +1,6 @@
 export const doctorInfo = {
   name: "Dr. Isha Singh, DDS",
   title: "General & Cosmetic Dentistry",
-  phone: "(555) 321-9876",
   email: "care@ishasinghdds.com",
   address: "742 Evergreen Terrace, Suite 200, Metro City, NY 10001",
   tagline: "Compassionate, gentle dental care for healthy, radiant smiles.",
@@ -25,7 +24,7 @@ export const dentalTips = [
     id: 1,
     category: "Daily Care",
     title: "The 2x2 Rule for Brushing",
-    description: "Brush your teeth twice a day for a full 2 minutes using a soft-bristled brush. Angles the bristles at 45 degrees towards your gumline to gently clean plaque without irritating gums.",
+    description: "Brush your teeth twice a day for a full 2 minutes using a soft-bristled brush. Angle the bristles at 45 degrees towards your gumline to gently clean plaque without irritating gums.",
     icon: "Sparkles"
   },
   {
@@ -53,7 +52,7 @@ export const dentalTips = [
     id: 5,
     category: "Emergency Care",
     title: "First Aid for Toothaches",
-    description: "Rinse gently with warm salt water and use a cold compress on your cheek to reduce swelling. Call our office immediately for same-day emergency relief.",
+    description: "Rinse gently with warm salt water and use a cold compress on your cheek to reduce swelling. Reach out to our office for assistance.",
     icon: "Zap"
   },
   {

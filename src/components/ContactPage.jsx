@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, Sparkles } from 'lucide-react';
+import { MapPin, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
 import { doctorInfo } from '../data/simplifiedData';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
     email: '',
     message: ''
   });
@@ -28,7 +27,7 @@ export default function ContactPage() {
           Contact & Location
         </h1>
         <p className="text-slate-300 text-sm sm:text-base">
-          Have a question or want to schedule an appointment? We are here to help.
+          Have a question or want to get in touch? Send us a message below.
         </p>
       </div>
 
@@ -58,12 +57,12 @@ export default function ContactPage() {
 
             <div className="glass-card p-5 rounded-2xl border border-slate-800 flex items-start gap-4">
               <div className="w-10 h-10 rounded-xl teal-gradient-bg text-white flex items-center justify-center shrink-0 shadow-md">
-                <Phone className="w-5 h-5" />
+                <Mail className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-heading font-bold text-white text-base">Phone & Email</h4>
-                <p className="text-xs sm:text-sm text-slate-300 mt-1">{doctorInfo.phone}</p>
-                <p className="text-xs text-teal-400 font-medium">{doctorInfo.email}</p>
+                <h4 className="font-heading font-bold text-white text-base">Email Inquiry</h4>
+                <p className="text-xs sm:text-sm text-slate-300 mt-1">{doctorInfo.email}</p>
+                <p className="text-xs text-slate-400 mt-0.5">Response within 24 business hours</p>
               </div>
             </div>
           </div>
@@ -92,14 +91,14 @@ export default function ContactPage() {
               Send Us a Message
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 mb-6">
-              Fill out the form below to request an appointment or inquire about our services.
+              Fill out the form below to get in touch with Dr. Singh’s practice.
             </p>
 
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-xs font-medium text-slate-300 mb-1">
-                    Your Name *
+                    Your Full Name *
                   </label>
                   <input
                     type="text"
@@ -111,44 +110,28 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="(555) 000-0000"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-teal-500"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="jane@example.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-teal-500"
-                    />
-                  </div>
+                <div>
+                  <label className="block text-xs font-medium text-slate-300 mb-1">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="jane@example.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-teal-500"
+                  />
                 </div>
 
                 <div>
                   <label className="block text-xs font-medium text-slate-300 mb-1">
-                    Message or Preferred Appointment Time *
+                    Your Message *
                   </label>
                   <textarea
                     rows="4"
                     required
-                    placeholder="Tell us how we can help or specify preferred date/time..."
+                    placeholder="Type your message or inquiry here..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-teal-500"
@@ -170,7 +153,7 @@ export default function ContactPage() {
                 </div>
                 <h4 className="font-heading font-bold text-xl text-white">Thank You!</h4>
                 <p className="text-xs sm:text-sm text-slate-300 max-w-sm mx-auto">
-                  Your message has been received. Dr. Singh's team will get back to you shortly.
+                  Your message has been received. Dr. Singh's team will get back to you shortly via email.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}

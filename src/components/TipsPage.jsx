@@ -11,7 +11,7 @@ const iconMap = {
   CheckCircle
 };
 
-export default function TipsPage({ onBookClick }) {
+export default function TipsPage({ onContactClick }) {
   return (
     <div className="py-12 sm:py-16 space-y-12 animate-in fade-in duration-300">
       
@@ -61,19 +61,19 @@ export default function TipsPage({ onBookClick }) {
         })}
       </div>
 
-      {/* Bottom CTA Banner */}
-      <div className="max-w-3xl mx-auto glass-panel p-6 sm:p-8 rounded-2xl border border-teal-500/30 text-center space-y-4">
+      {/* Bottom Information Banner */}
+      <div className="max-w-3xl mx-auto glass-panel p-6 sm:p-8 rounded-2xl border border-teal-500/30 text-center space-y-3">
         <h3 className="font-heading font-bold text-xl text-white">
-          Due for Your Semi-Annual Cleaning?
+          Have Questions About Your Oral Health?
         </h3>
         <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
-          Preventive care is the best way to avoid cavities and keep your smile shining. Schedule your checkup with Dr. Singh today!
+          Preventive care is the best way to maintain a lifelong healthy smile. Reach out to our office for any inquiries.
         </p>
         <button
-          onClick={onBookClick}
-          className="px-6 py-3 text-xs font-bold text-white teal-gradient-bg rounded-xl shadow-md hover:opacity-95"
+          onClick={onContactClick}
+          className="px-6 py-2.5 text-xs font-bold text-white teal-gradient-bg rounded-xl shadow-md hover:opacity-95"
         >
-          Book Your Checkup
+          Contact Our Office
         </button>
       </div>
 

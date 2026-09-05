@@ -1,8 +1,8 @@
 import React from 'react';
-import { Award, GraduationCap, Heart, Check, Sparkles, Calendar, ArrowRight } from 'lucide-react';
+import { GraduationCap, Heart, Check, Sparkles, ArrowRight } from 'lucide-react';
 import { doctorInfo } from '../data/simplifiedData';
 
-export default function AboutPage({ onBookClick, onExploreTips }) {
+export default function AboutPage({ onExploreTips, onContactClick }) {
   return (
     <div className="py-12 sm:py-16 space-y-16 animate-in fade-in duration-300">
       
@@ -23,19 +23,18 @@ export default function AboutPage({ onBookClick, onExploreTips }) {
 
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
           <button
-            onClick={onBookClick}
-            className="w-full sm:w-auto px-7 py-3.5 text-sm font-bold text-white teal-gradient-bg rounded-xl shadow-lg hover:opacity-95 flex items-center justify-center gap-2"
-          >
-            <Calendar className="w-4 h-4" />
-            <span>Book Your Appointment</span>
-          </button>
-          
-          <button
             onClick={onExploreTips}
-            className="w-full sm:w-auto px-6 py-3.5 text-sm font-semibold text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-800 rounded-xl border border-slate-700 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-6 py-3 text-sm font-semibold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-xl border border-slate-700 flex items-center justify-center gap-2"
           >
             <span>Read Dental Health Tips</span>
             <ArrowRight className="w-4 h-4 text-teal-400" />
+          </button>
+
+          <button
+            onClick={onContactClick}
+            className="w-full sm:w-auto px-6 py-3 text-sm font-semibold text-white teal-gradient-bg rounded-xl shadow-md flex items-center justify-center gap-2"
+          >
+            <span>Contact Office</span>
           </button>
         </div>
       </div>
