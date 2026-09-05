@@ -9,10 +9,10 @@ export default function Navbar({ activeTab, setActiveTab }) {
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-[#faf8f5]/90 backdrop-blur-md border-b border-stone-200/80">
+    <header className="sticky top-0 z-40 bg-[#fcfcfc]/90 backdrop-blur-md border-b border-[#afe3e2]/40">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
         
-        {/* Official Brand Logo */}
+        {/* Logo */}
         <button 
           onClick={() => setActiveTab('about')}
           className="flex items-center gap-3 text-left group"
@@ -30,10 +30,10 @@ export default function Navbar({ activeTab, setActiveTab }) {
             <button
               key={item.id}
               onClick={() => setActiveTab(item.id)}
-              className={`px-3.5 sm:px-5 py-2 text-xs sm:text-sm font-medium rounded-full transition-all ${
+              className={`px-3.5 sm:px-5 py-2 text-xs sm:text-sm font-semibold rounded-full transition-all ${
                 activeTab === item.id
-                  ? 'bg-aura-800 text-white shadow-sm font-semibold'
-                  : 'text-stone-600 hover:text-stone-900 hover:bg-stone-200/60'
+                  ? 'bg-[#afe3e2] text-slate-900 shadow-sm'
+                  : 'text-slate-700 hover:text-slate-900 hover:bg-[#afe3e2]/30'
               }`}
             >
               {item.label}

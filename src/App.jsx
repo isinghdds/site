@@ -9,7 +9,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('about'); // 'about' | 'tips' | 'contact'
 
   return (
-    <div className="min-h-screen bg-[#faf8f5] text-stone-800 flex flex-col font-sans selection:bg-aura-800 selection:text-white">
+    <div className="min-h-screen bg-[#fcfcfc] text-slate-800 flex flex-col font-sans selection:bg-[#afe3e2] selection:text-slate-900">
       {/* Header */}
       <Navbar
         activeTab={activeTab}

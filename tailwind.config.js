@@ -12,19 +12,12 @@ export default {
         heading: ['"Playfair Display"', 'serif'],
       },
       colors: {
-        aura: {
-          50: '#faf8f5',
-          100: '#f4efe8',
-          200: '#e8ded2',
-          300: '#d7c5b4',
-          400: '#c2a591',
-          500: '#ab8872',
-          600: '#956f5a',
-          700: '#7a5746',
-          800: '#64473b',
-          900: '#533c33',
-          950: '#2c1e19',
-        }
+        themeBg: '#fcfcfc',
+        themeMint: '#afe3e2',
+        themeBlush: '#f2b7b7',
+        mintDark: '#7bc4c2',
+        blushDark: '#e38b8b',
+        charcoal: '#1e293b'
       }
     },
   },
