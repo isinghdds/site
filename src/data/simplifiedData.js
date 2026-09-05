@@ -1,8 +1,8 @@
 export const doctorInfo = {
   name: "Dr. Isha Singh, DDS",
   title: "General & Preventive Dentistry",
-  email: "care@ishasinghdds.com",
-  address: "742 Evergreen Terrace, Suite 200, Metro City, NY 10001",
+  email: "isha@ishasinghdds.com",
+  address: "King of Prussia, PA",
   tagline: "Compassionate, gentle dental care for healthy, radiant smiles.",
   bio: `Dr. Isha Singh, originally hailing from New Delhi, India, embarked on a journey of cultural immersion early in life, residing across various regions of India. These diverse experiences have sculpted her into the compassionate and understanding professional she is today. Beginning her career in a community clinic in India, she later pursued her DDS at UCSF School of Dentistry in the US.
 
