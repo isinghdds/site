@@ -6,13 +6,15 @@ export default function Footer({ setActiveTab }) {
     <footer className="bg-[#fcfcfc] border-t border-[#afe3e2]/40 py-10 text-slate-600 text-xs">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         
-        {/* Left: Official Logo & Domain */}
+        {/* Left: Official Logo Icon & Domain */}
         <div className="flex items-center gap-3">
-          <img
-            src="/logo.jpg"
-            alt="Isha Singh DDS Logo"
-            className="h-10 w-auto object-contain mix-blend-multiply"
-          />
+          <div className="w-9 h-9 rounded-xl overflow-hidden bg-white border border-[#afe3e2]/60 p-1 shadow-sm mix-blend-multiply flex items-center justify-center">
+            <img
+              src="/logo-icon.jpg"
+              alt="Isha Singh DDS Logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
           <div>
             <span className="font-serif font-bold text-slate-900 text-sm block">
               {doctorInfo.name}
