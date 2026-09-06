@@ -10,7 +10,8 @@ With a foundation rooted in preventive and comprehensive care, her innate gentle
 
 Beyond her professional endeavors, Dr. Singh enjoys spending quality time with her loved ones and indulging her passion for travel. Exploring diverse cultures, reveling in nature's beauty, and savoring culinary delights fuel her curiosity and zest for life.`,
   credentials: [
-    "Degree in Doctor of Dental Surgery (DDS), UCSF School of Dentistry"
+    "Degree in Doctor of Dental Surgery (DDS), UCSF School of Dentistry",
+    "Bachelor of Dental Surgery, Bhartiya Vidyapeeth University"
   ],
   languages: [
     "English",
