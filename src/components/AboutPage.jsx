@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Heart, Check, Sparkles, ArrowRight, Globe } from 'lucide-react';
+import { GraduationCap, Heart, Check, Sparkles, ArrowRight, Globe, ShieldCheck } from 'lucide-react';
 import { doctorInfo } from '../data/simplifiedData';
 
 export default function AboutPage({ onExploreTips, onContactClick }) {
@@ -100,6 +100,21 @@ export default function AboutPage({ onExploreTips, onContactClick }) {
                     <div className="text-sm sm:text-base text-slate-900 font-bold">{cred.degree}</div>
                     <div className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">{cred.school}</div>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Services at a Glance */}
+          <div className="theme-card p-6 rounded-3xl space-y-3 border border-[#afe3e2]/40">
+            <h3 className="font-serif font-bold text-lg text-slate-900 flex items-center gap-2">
+              <ShieldCheck className="w-5 h-5 text-slate-900" /> Dental Care & Services
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+              {doctorInfo.services?.map((service, idx) => (
+                <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 font-medium">
+                  <span className="w-2 h-2 rounded-full bg-[#afe3e2] shrink-0"></span>
+                  <span>{service}</span>
                 </div>
               ))}
             </div>

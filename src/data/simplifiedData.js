@@ -3,7 +3,7 @@ export const doctorInfo = {
   title: "General & Preventive Dentistry",
   email: "isha@ishasinghdds.com",
   address: "King of Prussia, PA",
-  tagline: "Compassionate, gentle dental care for healthy, radiant smiles.",
+  tagline: "Compassionate, gentle dental care for families in King of Prussia, PA and surrounding communities.",
   bio: `Dr. Isha Singh, originally hailing from New Delhi, India, embarked on a journey of cultural immersion early in life, residing across various regions of India. These diverse experiences have sculpted her into the compassionate and understanding professional she is today. Beginning her career in a community clinic in India, she later pursued her DDS at UCSF School of Dentistry in the US.
 
 With a foundation rooted in preventive and comprehensive care, her innate gentleness and patience enable her to empathize with patients' dental anxieties, guiding them towards optimal dental health. Driven by the belief that oral health is paramount to overall well-being, she advocates for broader awareness of oral health and its correlation with general health.
@@ -22,7 +22,16 @@ Beyond her professional endeavors, Dr. Singh enjoys spending quality time with h
   languages: [
     "English",
     "Hindi"
-  ]
+  ],
+  services: [
+    "Preventive Cleanings & Comprehensive Exams",
+    "Gentle Restorative Fillings & Crowns",
+    "Professional Teeth Whitening",
+    "Clear Aligner Therapy (Invisalign®)",
+    "Periodontal Gum Care & Maintenance",
+    "Emergency Dental Relief"
+  ],
+  insuranceInfo: "We work with most major PPO dental insurance plans and provide clear, transparent cost estimates before any procedure."
 };
 
 export const dentalTips = [

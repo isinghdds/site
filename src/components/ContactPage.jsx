@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Mail, Send, CheckCircle2, Loader2 } from 'lucide-react';
+import { MapPin, Mail, Send, CheckCircle2, Loader2, ShieldCheck } from 'lucide-react';
 import { doctorInfo } from '../data/simplifiedData';
 
 export default function ContactPage() {
@@ -91,6 +91,18 @@ export default function ContactPage() {
                 {doctorInfo.email}
               </a>
               <p className="text-xs text-slate-600 mt-1">Response within 24 business hours</p>
+            </div>
+          </div>
+
+          <div className="theme-card p-6 rounded-3xl flex items-start gap-4 border border-[#afe3e2]/60 bg-[#afe3e2]/10">
+            <div className="w-10 h-10 rounded-full bg-[#afe3e2] text-slate-900 flex items-center justify-center shrink-0 shadow-sm">
+              <ShieldCheck className="w-5 h-5" />
+            </div>
+            <div>
+              <h4 className="font-serif font-bold text-slate-900 text-base">Insurance & Financing</h4>
+              <p className="text-xs sm:text-sm text-slate-700 mt-1 leading-relaxed">
+                {doctorInfo.insuranceInfo}
+              </p>
             </div>
           </div>
 
