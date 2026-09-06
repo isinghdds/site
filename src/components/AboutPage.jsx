@@ -92,11 +92,14 @@ export default function AboutPage({ onExploreTips, onContactClick }) {
               <GraduationCap className="w-5 h-5 text-slate-900" /> Qualifications & Education
             </h3>
             
-            <div className="space-y-2">
+            <div className="space-y-3">
               {doctorInfo.credentials.map((cred, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-[#afe3e2]/15 border border-[#afe3e2]/40">
-                  <Check className="w-4 h-4 text-slate-900 shrink-0" />
-                  <span className="text-xs sm:text-sm text-slate-800 font-medium">{cred}</span>
+                <div key={idx} className="flex items-start gap-3 p-3.5 rounded-xl bg-[#afe3e2]/15 border border-[#afe3e2]/40">
+                  <Check className="w-4 h-4 text-slate-900 shrink-0 mt-0.5" />
+                  <div>
+                    <div className="text-sm sm:text-base text-slate-900 font-bold">{cred.degree}</div>
+                    <div className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">{cred.school}</div>
+                  </div>
                 </div>
               ))}
             </div>
