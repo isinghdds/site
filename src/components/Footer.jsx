@@ -37,9 +37,8 @@ export default function Footer({ setActiveTab }) {
         </div>
 
         {/* Right: Copyright */}
-        <div className="text-center md:text-right space-y-0.5">
+        <div className="text-center md:text-right">
           <p>© {new Date().getFullYear()} {doctorInfo.name}. All rights reserved.</p>
-          <p className="text-[11px] text-slate-500">Hosted on Cloudflare Pages</p>
         </div>
 
       </div>
